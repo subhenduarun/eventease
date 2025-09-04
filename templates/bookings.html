@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EventEase Home</title>
+  <title>All Bookings</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -36,12 +36,15 @@
     }
     a.button {
       padding: 6px 12px;
-      background-color: #28a745;
+      background-color: #007BFF;
       color: white;
       text-decoration: none;
       border-radius: 4px;
       margin: 0 4px;
       font-size: 14px;
+    }
+    a.button.delete {
+      background-color: #dc3545;
     }
     a.button:hover {
       opacity: 0.85;
@@ -49,20 +52,24 @@
   </style>
 </head>
 <body>
-  <h2>Welcome to EventEase</h2>
-  <a href="/book" class="button">Book an Event</a>
-  <a href="/bookings" class="button">View All Bookings</a>
+  <h2>All Bookings</h2>
+  <a href="/book" class="button">New Booking</a>
   <table>
     <tr>
       <th>ID</th>
       <th>Name</th>
       <th>Event Type</th>
+      <th>Actions</th>
     </tr>
     {% for booking in bookings %}
     <tr>
       <td>{{ booking.id }}</td>
       <td>{{ booking.name }}</td>
       <td>{{ booking.event_type }}</td>
+      <td>
+        <a href="/edit/{{ booking.id }}" class="button">Edit</a>
+        <a href="/delete/{{ booking.id }}" class="button delete">Delete</a>
+      </td>
     </tr>
     {% endfor %}
   </table>

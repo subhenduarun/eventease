@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install flask
+RUN pip install flask sqlalchemy
 
 CMD ["python", "backend/app.py"]

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Book Your Event</title>
+  <title>Book an Event</title>
 </head>
 <body>
-  <h2>Event Booking Form</h2>
+  <h2>Book Your Event</h2>
   <form method="POST">
-    Name: <input type="text" name="name"><br>
-    Event Type: <input type="text" name="event"><br>
-    <input type="submit" value="Book">
+    <label for="name">Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label for="event">Event Type:</label><br>
+    <input type="text" name="event" required><br><br>
+
+    <button type="submit">Submit Booking</button>
   </form>
 </body>
 </html>
