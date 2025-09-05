@@ -47,3 +47,4 @@ jobs:
     #   run: |
     #     docker tag eventease:latest your-dockerhub-username/eventease:latest
     #     docker push your-dockerhub-username/eventease:latest
+
